@@ -6,7 +6,7 @@ package:
 source:
   fn: mutagen-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/m/mutagen/mutagen-{{ version }}.tar.gz
-  md5: 349b987d26dbf15f64919f80c060eb14
+  sha256: 7721ded04caf36fc30661165ae311fed342f7503b048e9db3d52764108ed3ab5
 
 build:
   preserve_egg_dir: True
