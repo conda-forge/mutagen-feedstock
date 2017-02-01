@@ -1,16 +1,22 @@
-{% set version = "1.32" %}
+{%set name = "mutagen" %}
+{%set version = "1.36.2" %}
+{%set compress_type = "tar.gz" %}
+{%set hash_type = "sha256" %}
+{%set hash_val = "86fe98e941ca305be8ee6bdc6bb0e4e9c473bf9fb69a838fe5bf2fc6124fbcc7" %}
+{%set build_num = "0" %}
+
 package:
-  name: mutagen
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: mutagen-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/m/mutagen/mutagen-{{ version }}.tar.gz
-  sha256: 7721ded04caf36fc30661165ae311fed342f7503b048e9db3d52764108ed3ab5
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  {{ hash_type }}: {{ hash_val }}
 
 build:
   preserve_egg_dir: True
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install
 
 requirements:
@@ -27,10 +33,21 @@ test:
     - mutagen.id3
     - mutagen.mp4
 
+  commands:
+    - mid3cp -h
+    - mid3iconv -h
+    - moggsplit -h
+    - mutagen-inspect -h
+    - mutagen-pony -h
+
 about:
   home: https://github.com/quodlibet/mutagen
-  license: GNU General Public License v2 (GPLv2)
+  license: GPLv2
+  license_family: GPL
+  license_file: COPYING
   summary: 'Read and write audio tags for many formats'
+  dev_url: https://github.com/quodlibet/mutagen
+  doc_url: https://mutagen.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
