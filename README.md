@@ -3,13 +3,25 @@ About mutagen
 
 Home: https://github.com/quodlibet/mutagen
 
-Package license: GNU General Public License v2 (GPLv2)
+Package license: GPLv2
 
 Feedstock license: BSD 3-Clause
 
 Summary: Read and write audio tags for many formats
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mutagen-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mutagen-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/mutagen-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mutagen-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mutagen-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mutagen-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mutagen/badges/version.svg)](https://anaconda.org/conda-forge/mutagen)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mutagen/badges/downloads.svg)](https://anaconda.org/conda-forge/mutagen)
 
 Installing mutagen
 ==================
@@ -66,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mutagen-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mutagen-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mutagen-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mutagen-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mutagen-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mutagen-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mutagen/badges/version.svg)](https://anaconda.org/conda-forge/mutagen)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mutagen/badges/downloads.svg)](https://anaconda.org/conda-forge/mutagen)
 
 
 Updating mutagen-feedstock
