@@ -1,8 +1,8 @@
 {%set name = "mutagen" %}
-{%set version = "1.37" %}
+{%set version = "1.38" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "539553d3f1ffd890c74f64b819750aef0316933d162c09798c9e7eaf334ae760" %}
+{%set hash_val = "23990f70ae678c7b8df3fd59e2adbefa5fe392c36da8c71d2254b21c6cd78766" %}
 {%set build_num = "0" %}
 
 package:
