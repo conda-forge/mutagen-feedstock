@@ -14,9 +14,7 @@ Summary: Read and write audio tags for many formats
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mutagen-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mutagen-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mutagen-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mutagen-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mutagen-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mutagen-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/mutagen-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mutagen-feedstock)
 
 Current release info
 ====================
