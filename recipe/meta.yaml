@@ -1,8 +1,8 @@
 {% set name = "mutagen" %}
-{% set version = "1.38" %}
+{% set version = "1.39" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "23990f70ae678c7b8df3fd59e2adbefa5fe392c36da8c71d2254b21c6cd78766" %}
+{% set hash_val = "9da92566458ffe5618ffd26167abaa8fd81f02a7397b8734ec14dfe14e8a19e4" %}
 {% set build = 0 %}
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
