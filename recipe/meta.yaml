@@ -1,8 +1,8 @@
 {% set name = "mutagen" %}
-{% set version = "1.38" %}
+{% set version = "1.40.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "23990f70ae678c7b8df3fd59e2adbefa5fe392c36da8c71d2254b21c6cd78766" %}
+{% set hash_val = "b2a2c2ce87863af12ed7896f341419cd051a3c72c3c6733db9e83060dcadee5e" %}
 {% set build = 0 %}
 
 package:
@@ -16,7 +16,7 @@ source:
 
 build:
   preserve_egg_dir: True
-  number: {{ build }}
+  number: 0
   script: python setup.py install
 
 requirements:
