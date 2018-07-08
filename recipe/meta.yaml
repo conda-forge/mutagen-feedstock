@@ -3,7 +3,7 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash_val = "b2a2c2ce87863af12ed7896f341419cd051a3c72c3c6733db9e83060dcadee5e" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -15,12 +15,14 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   preserve_egg_dir: True
-  number: 0
-  script: python setup.py install
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
 
   run:
