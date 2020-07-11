@@ -1,8 +1,7 @@
 {% set name = "mutagen" %}
-{% set version = "1.41.1" %}
+{% set version = "1.45.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "2ea9c900a05fa7f5f4c5bd9fc1475d7d576532e13b2f79b694452b997ff67200" %}
+{% set hash_val = "b2d56a0471eabcce0881974bed98dfc2135126ab01d253652b74b64df4da73e8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,13 +10,13 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
-  preserve_egg_dir: True
+  preserve_egg_dir: true
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -46,7 +45,7 @@ about:
   license: GPLv2
   license_family: GPL
   license_file: COPYING
-  summary: 'Read and write audio tags for many formats'
+  summary: Read and write audio tags for many formats
   dev_url: https://github.com/quodlibet/mutagen
   doc_url: https://mutagen.readthedocs.io/en/latest/
 
