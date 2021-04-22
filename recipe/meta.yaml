@@ -1,7 +1,7 @@
 {% set name = "mutagen" %}
-{% set version = "1.45.0" %}
+{% set version = "1.45.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_val = "b2d56a0471eabcce0881974bed98dfc2135126ab01d253652b74b64df4da73e8" %}
+{% set hash_val = "6397602efb3c2d7baebd2166ed85731ae1c1d475abca22090b7141ff5034b3e1" %}
 
 package:
   name: {{ name|lower }}
