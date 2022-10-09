@@ -1,5 +1,5 @@
 {% set name = "mutagen" %}
-{% set version = "1.45.1" %}
+{% set version = "1.46.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6397602efb3c2d7baebd2166ed85731ae1c1d475abca22090b7141ff5034b3e1
+  sha256: 6e5f8ba84836b99fe60be5fb27f84be4ad919bbb6b49caa6ae81e70584b55e58
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
     - mutagen-inspect -h
     - mutagen-pony -h
     - pip check
-    
+
   requires:
     - pip
 
