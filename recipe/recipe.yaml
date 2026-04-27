@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: mutagen
+  version: "1.47.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 719fadef0a978c31b4cf3c956261b3c58b6948b32023078a2117b1de09f0fc99
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - mutagen
+        - mutagen.asf
+        - mutagen.id3
+        - mutagen.mp4
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - mid3cp -h
+      - mid3iconv -h
+      - moggsplit -h
+      - mutagen-inspect -h
+      - mutagen-pony -h
+
+about:
+  license: GPL-2.0-or-later
+  license_file: COPYING
+  summary: Read and write audio tags for many formats
+  homepage: https://github.com/quodlibet/mutagen
+  repository: https://github.com/quodlibet/mutagen
+  documentation: https://mutagen.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - jan-janssen
