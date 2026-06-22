@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mutagen
-  version: "1.47.0"
+  version: "1.48.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 719fadef0a978c31b4cf3c956261b3c58b6948b32023078a2117b1de09f0fc99
+  sha256: 4933d14b83a2add03c23e04a3c397ffbe44f130403f1256881ee228869aee3bb
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
